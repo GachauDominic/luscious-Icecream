@@ -1,0 +1,40 @@
+/* --header nav-- */
+#header-nav nav a {
+  color: #fff5e0;
+  text-decoration: none;
+  position: relative;
+}
+#header-nav nav a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #fff5e0;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.85s;
+  opacity: 0.9;
+}
+#header-nav nav a:hover::after{
+  width: 100%;
+}
+
+/* dark mode */
+
+@keyframes toggleOn {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(22px);
+  }
+}
+
+@keyframes toggleOff {
+  0%{
+    transform: translateX(40px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
